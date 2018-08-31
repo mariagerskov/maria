@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+	<meta charset="UTF-8">
+	<title>Maria Gerskov - Portfolio</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Oswald:200" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<ul>
+			<li>
+				<a href="index.html">forside</a>
+			</li>
+			<li>
+				<a href="about.html">om mig</a>
+			</li>
+			<li>
+				<a href="portfolio.html" class="active">portfolio</a>
+			</li>
+			<li>
+				<a href="contact.html">kontakt</a>
+			</li>
+
+		</ul>
+	</header>
+			
+<div class="wrapper">
+
+	<div class="portfolio-image">
+		<img src="img/Hestekat.jpg" alt="">
+	</div>
+	<div class="portfolio-image"><img src="img/KAj.JPG"" alt=""></div>
+	<div class="portfolio-image"><img src="img/logotouch.png" alt=""></div>
+	<div class="portfolio-image"><img src="img/obm.JPG" alt=""></div>
+	<div class="portfolio-image"><img src="img/TheSimpsonsFamily-poster.jpg" alt=""></div>
+	<div class="portfolio-image"><img src="img/piggy.png" alt=""></div>
+	<div class="portfolio-image"><img src="img/portræt.jpg" alt=""></div>
+	<div class="portfolio-image"><img src="img/lastsupper.jpg" alt=""></div>
+
+
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("portfolio-image");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+</body>
+</html>
